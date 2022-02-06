@@ -1,0 +1,131 @@
+/* Use Short-hands
+  Structure top to down
+  Position
+  Box Modal
+  Typography
+  Visual
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-font-weight: 700;
+  --paragraph-font-weight: 400;
+}
+
+body {
+  height: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Space Mono", monospace;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* Main CSS Starts from Here */
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.headerText {
+  padding: 1.25rem;
+  text-transform: uppercase;
+  font-family: "Inconsolata", monospace;
+  font-weight: var(--paragraph-font-weight);
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  min-height: 83vh;
+}
+
+.imageDiv img {
+  width: 33rem;
+  height: 28rem;
+}
+.header {
+  font-size: 64px;
+  font-weight: var(--header-font-weight);
+}
+
+.paragraph {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: var(--paragraph-font-weight);
+}
+
+.btnStyle {
+  margin-top: 2rem;
+  padding: 1.5rem 2.5rem;
+  text-transform: uppercase;
+  background-color: #333333;
+  color: #fff;
+  font-size: 14px;
+  font-weight: var(--header-font-weight);
+  cursor: pointer;
+}
+
+.footer {
+  font-family: Montserrat;
+  font-weight: var(--header-font-weight);
+  font-size: 14px;
+  color: #bdbdbd;
+  text-align: center;
+}
+
+.mySocialLink {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
+@media screen and (max-width: 480px) {
+  .mainContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .imageDiv img {
+    width: 17.5rem;
+    height: 15rem;
+  }
+
+  .header {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    margin-top: 2rem;
+  }
+}
